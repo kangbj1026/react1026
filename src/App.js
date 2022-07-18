@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
-function Hello() {
+function Hi() {
 	return <h1>Hello</h1>
 }
+const Bye = () => <h1>Bye</h1>
+
 function App() {
-	const [showing, setShowing] = useState(false);
-	const onClick = () => setShowing((def) => !def)
+	const [showing, setShowing] = useState(true);
+	const onClick = () => {
+		setShowing((def) => !def);
+	}
 	return (
 		<div>
-			{showing ? <Hello/> : null}
-			<button onClick={onClick}>{showing ? "Hide" : "Show" }</button>
+			{showing ? <Hi/> : <Bye/>}
+			<button onClick={onClick}>{showing ? "Show" : "Hide" }</button>
 		</div>
 	);
 }
