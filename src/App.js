@@ -1,27 +1,24 @@
 import { useState, useEffect } from "react";
-function Hi() {
-	return <h1>Hello</h1>
-}
-const Bye = () => <h1>Bye</h1>
 function App() {
-	const [showing, setShowing] = useState(true);
-	const onClick = () => {
-		setShowing((def) => !def);
+	const [toDo,setToDo] = useState("");
+	const [toDos,setToDos] = useState([]);
+	const onChange = (eve) => setToDo(eve.target.value)
+	const onSubmit = (eve) => {
+		eve.preventDefault();
+		if (toDo === "") {
+			console.log(toDo);
+		}
+		setToDos(currentArray => [toDo, ...currentArray]);
+		setToDo("");
 	}
-	const boy = document.body.style;
-	const Color = () => {
-	useEffect(()=>{
-		boy.backgroundColor = "#000000c2";
-		return () => boy.backgroundColor = "white";
-	},[])
-	}
-	return (
-		<div>
-			{showing ? <Color/> : null}
-			{showing ? <Hi/> : <Bye/>}
-			<button onClick={onClick}>{showing ? "Show" : "Hide" }</button>
-		</div>
-	);
+	console.log(toDos);
+	return <div>
+		<h1>My YO Dos {toDos.length}</h1>
+		<form onSubmit={onSubmit}>
+		<input type={"text"} onChange={onChange} placeholder={"Write your to do..."} value={toDo}/>
+		<button>Add To Do</button>
+		</form>
+	</div>;
 }
 
 export default App;
