@@ -7,7 +7,8 @@ function App() {
 	}
 	const onSubmit = (e) => {
 		e.preventDefault();
-		setSingArray(def => [singers.length == 1 ? singers : singers+", " , ...def])
+		setSingArray(def => [singArray.length < 1 ? singers : singers+", " , ...def])
+		console.log(singArray);
 	}
 	return <div>
 		<h1>Names : {singArray}</h1>
