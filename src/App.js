@@ -1,26 +1,19 @@
-import { useState, useEffect } from "react";
-import Movie from "./Movie";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // npm i react-router-dom@5.3.0
+import Home from "./routes/Home"
+import Detail from "./routes/Detail"
 function App() {
-	const [loading, setLoading] = useState(true);
-	const [movies, setMovies] = useState([]);
-	useEffect(()=> {
-		getMovies()
-	},[])
-	const getMovies = async() => {
-		const getMovies = await fetch("https://yts.mx/api/v2/list_movies.jsonminimum_rating=8.8&sort_by=year");
-		const json = await getMovies.json();
-		setMovies(json.data.movies);
-		setLoading(false);
-	}
-	return <div>
-		{loading ?
-		<h1>Loading... </h1>
-		:
-		movies.map((movie) =>
-			<Movie title={movie.title} url={movie.url} coverImg={movie.medium_cover_image} summary={movie.summary} genres={movie.genres}/>
-		)
-		}
-	</div>;
+	return (
+	<Router>
+		<Switch> {/*Switch Route 찾는 일, Route 는 URL을 의미, Route를 찾으면 컴포넌트를 렌더링 */}
+			<Route path="/movie/:id">
+				<Detail/>
+			</Route>
+			<Route path="/">
+				<Home/>
+			</Route>
+		</Switch>
+	</Router>
+	);
 }
 
 export default App;
