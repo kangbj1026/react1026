@@ -18,7 +18,7 @@ function Detail() {
 			<img src={data.medium_cover_image} alt={data.title}/>
 			<p>{data.description_intro}</p>
 			<ul>
-				{data.genres.map((g)=><li key={g}>{g}</li>)}
+				{/* {data.genres.map((g)=><li key={g}>{g}</li>)} */}
 			</ul>
 		</div>
 	);
