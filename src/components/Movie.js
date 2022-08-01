@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom"; // npm i react-router-dom@5.3.0
 import styles from "./Movie.module.css"
-function Movie({id, title, coverImg, year, summary, genres}) {
-	return <div className={styles.movie}>
+function Movie({index, id, title, coverImg, year, summary, genres}) {
+	return (
+	<div className={styles.movie}>
 		<img src={coverImg} alt={title} className={styles.movie__img}/>
 		<h2 className={styles.movie__title}>
 			<Link to={`/movie/${id}`}>{title}</Link>
@@ -12,7 +13,7 @@ function Movie({id, title, coverImg, year, summary, genres}) {
 		<ul className={styles.movie__genres}>
 			{genres.map((g)=><li key={g}>{g}</li>)}
 		</ul>
-	</div>;
+	</div>);
 }
 
 Movie.prototype = {

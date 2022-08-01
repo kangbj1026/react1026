@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
+import styles from "./Detail.module.css";
 function Detail() {
 	const {id} = useParams();
 	const [data, setData] = useState([]);
@@ -13,14 +14,16 @@ function Detail() {
 		getMovie();
 	},[])
 	return (
-		<div key={data.id}>
+	<div className={styles.container}>
+		<div key={data.id} className={styles.movie}>
 			<h2>{data.title}</h2>
-			<img src={data.medium_cover_image} alt={data.title}/>
+			<img src={data.medium_cover_image} alt={data.title} className={styles.movie_img}/>
 			<p>{data.description_intro}</p>
 			<ul>
 				{/* {data.genres.map((g)=><li key={g}>{g}</li>)} */}
 			</ul>
 		</div>
+	</div>
 	);
 }
 export default Detail;
