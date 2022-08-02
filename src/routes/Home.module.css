@@ -1,60 +1,32 @@
 .container {
-	height: 100%;
+	padding-top: 20px;
 	background-color: #000000;
-	justify-content: center;
 }
 .movie_container {
 	display: inline-grid;
-}
-.position_nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-
-	color: white;
-	background: teal;
-	font-weight: bold;
-	justify-content: space-between;
-	align-items: center;
-}
-.position_nav ul li button {
-	text-decoration: none;
-	background-color: teal;
-	color: white;
-	border: 0;
-	font-size: 20px;
-}
-.position {
-	display: flex;
-	list-style: none;
-}
-.positions {
-	padding: inherit;
 }
 
 .loader {
 	width: 100%;
 	height: 100vh;
+	font-size: 50px;
 	display: flex;
+	color: #ffffff;
 	justify-content: center;
 	align-items: center;
-	font-weight: 300;
 }
 
 .movies {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(400px, 1fr));
-	grid-gap: 100px;
-	padding: 50px;
-	width: 80%;
-	padding-top: 70px;
+	grid-template-columns: repeat(7, minmax(210px, 1fr));
+	padding: 40px;
+	width: 90%;
 	margin: auto;
 }
 
 @media screen and (max-width: 1090px) {
 	.movies {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(3, minmax(0px, 1fr));
 		width: 100%;
 	}
 }

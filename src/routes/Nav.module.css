@@ -1,0 +1,26 @@
+.position_nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: white;
+	background: teal;
+	font-weight: bold;
+	justify-content: space-between;
+	align-items: center;
+}
+.position_nav ul li button, .position_nav ul li a {
+	text-decoration: none;
+	background-color: teal;
+	color: white;
+	border: 0;
+	font-size: 20px;
+	cursor: pointer;
+}
+.position {
+	display: flex;
+	list-style: none;
+}
+.positions {
+	padding: inherit;
+}
