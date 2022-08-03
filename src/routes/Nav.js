@@ -11,7 +11,7 @@ function Nav() {
 	}
 	function Moving({root}) {
 		return (
-		root === "Main" ? <Link to={"/"}>{root}</Link> : <button onClick={root === "Top" ? ScrollTop : ScrollFloor}>{root}</button>
+		root === "Main" ? <Link to={"/react1026"}>{root}</Link> : <button onClick={root === "Top" ? ScrollTop : ScrollFloor}>{root}</button>
 		)
 	}
 	Moving.prototype = {
