@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## `npx create-react-app ProjectName`
+## `npm i prop-types`
+## `npm i react-router-dom`
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -78,7 +82,6 @@ github pages에 업로드 할 수 있게 해주는 패키지\
 	"deploy": "gh-pages -d build",\
 	"predeploy": "npm run build"\
 },\
-// package에 "name": "react1026" 처럼 "homepage" 를 추가\
-// https://본인github username.github.io/github repository\
-"homepage": "https://kangbj1026.github.io/react1026"\
-
+package에 "name": "react1026" 처럼 "homepage" 를 추가\
+https://본인github username.github.io/github repository\
+"homepage": "https://kangbj1026.github.io/react1026" \

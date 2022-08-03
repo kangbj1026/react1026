@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // npm i react-router-dom@5.3.0
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./routes/Home"
 import Detail from "./routes/Detail"
 import Nav from "./routes/Nav"
