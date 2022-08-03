@@ -11,9 +11,7 @@
 	font-weight: 300;
 	font-size: 20px;
 	color: #6fe2b9;
-	white-space: nowrap;
-	overflow: hidden;
-    text-overflow: ellipsis;
+	text-align: center;
 }
 
 .movie_rating {

@@ -10,7 +10,7 @@ function Movie({id, titleLong, coverImg, rating}) {
 		<h2 className={styles.movie_title}>
 			{titleLong}
 		</h2>
-		<h3 className={styles.movie_rating}>{rating}</h3>
+		{/* <h3 className={styles.movie_rating}>{rating}</h3> */}
 		{/* <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p> */}
 		{/* <ul className={styles.movie__genres}>
 			{genres.map((g)=><li key={g}>{g}</li>)}
